@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sanpham.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="header-img">
+          <img
+            width="100"
+            height="94"
+            src="http://thietkewebgioithieusanpham.thietkewebqcv.vn/wp-content/uploads/2020/07/kaffa_logo_light_1x.png"
+            class="vc_single_image-img attachment-full"
+            alt=""
+          />
+        </div>
+        <div class="header-content">
+          <a href="/">Trang chủ</a>
+          <a href="">Giới thiệu</a>
+          <a href="">Sản phẩm</a>
+          <a href="">Quy trình rang</a>
+          <a href="">Giỏ hàng</a>
+          <a href="">Liên hệ</a>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="main-content-container">
+          <div class="main-content-container-top">
+            <div class="main-content-breadcrumbs">
+              <ul class="main-content-breadcrumbs-menu">
+                <li>
+                  <a href="/Project/home/index.html"
+                    ><i class="fa-solid fa-house"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="a-soc">/</a>
+                </li>
+                <li>
+                  <a> giỏ hàng </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-content-container-bot">
+            <h2 class="sanpham-title">
+              <span> Giỏ hàng</span>
+            </h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col" class="text">&nbsp;</th>
+                  <th scope="col" class="text">&nbsp;</th>
+                  <th scope="col" class="text">Sản phẩm</th>
+                  <th scope="col" class="text">Giá</th>
+                  <th scope="col" class="text">Số lượng</th>
+                  <th scope="col" class="text">Tạm tính</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="text"><i class="fa-solid fa-xmark"></i></th>
+                  <td class="text">
+                    <img
+                      src="http://thietkewebgioithieusanpham.thietkewebqcv.vn/wp-content/uploads/2020/07/product-new-02-480x682-450x450.jpg"
+                      alt=""
+                      class="thumbai"
+                    />
+                  </td>
+                  <td class="text">Cafe Columbia Whole Bean</td>
+                  <td class="text product-price">200,000VND</td>
+                  <td class="text product-quantity" data-title="Số lượng">
+                    <div class="quantity info-qty box-qty">
+                      <button
+                        type="button"
+                        class="qty-down quantity-minus"
+                        href="#"
+                      >
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
+                      <input
+                        type="text"
+                        data-step="1"
+                        data-min="0"
+                        value="1"
+                        title="Số lượng"
+                        class="input-text text qty-val quantity"
+                        size="4"
+                      />
+                      <button type="button" class="qty-up quantity-plus">
+                        <i class="fa-solid fa-plus"></i>
+                      </button>
+                    </div>
+                  </td>
+                  <td class="text">200,000VND</td>
+                </tr>
+                <tr>
+                  <td colspan="6" class="actions">
+                    <div class="coupon">
+                      <input
+                        type="text"
+                        name="coupon_code"
+                        class="input-text"
+                        id="coupon_code"
+                        value=""
+                        placeholder="Mã ưu đãi"
+                      />
+                      <button
+                        type="submit"
+                        class="button"
+                        name="apply_coupon"
+                        value="Áp dụng"
+                      >
+                        Áp dụng
+                      </button>
+                    </div>
+
+                    <button
+                      type="submit"
+                      class="button update_cart"
+                      name="update_cart"
+                      value="Cập nhật giỏ hàng"
+                    >
+                      Cập nhật giỏ hàng
+                    </button>
+
+                    <input
+                      type="hidden"
+                      id="woocommerce-cart-nonce"
+                      name="woocommerce-cart-nonce"
+                      value="ad25b82a81"
+                    />
+                    <input
+                      type="hidden"
+                      name="_wp_http_referer"
+                      value="/gio-hang/"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="cart-collaterals">
+              <div class="cart_totals">
+                <h2>Cộng giỏ hàng</h2>
+
+                <table cellspacing="0" class="shop_table">
+                  <tbody>
+                    <tr class="cart-subtotal">
+                      <th>Tạm tính</th>
+                      <td data-title="Tạm tính">
+                        <span class="woocommerce-Price-amount amount"
+                          >200,000 VND
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr class="order-total">
+                      <th>Tổng</th>
+                      <td data-title="Tổng">
+                        <strong>
+                          <span class="woocommerce-Price-amount amount">
+                            200,000VND
+                          </span>
+                        </strong>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="proceed-to-checkout">
+                  <button class="button">Tiến hành thanh toán</button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="cart-enty woocommerce-info">
+              Chưa có sản phẩm nào trong giỏ hàng.
+            </div>
+            <p class="return-to-shop">
+              <a
+                class="button wc-backward"
+                href="http://thietkewebgioithieusanpham.thietkewebqcv.vn/mua/"
+              >
+                Quay trở lại cửa hàng
+              </a>
+            </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
