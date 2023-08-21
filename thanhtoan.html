@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./sanpham.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-img">
+                <img width="100" height="94"
+                    src="http://thietkewebgioithieusanpham.thietkewebqcv.vn/wp-content/uploads/2020/07/kaffa_logo_light_1x.png"
+                    class="vc_single_image-img attachment-full" alt="" />
+            </div>
+            <div class="header-content">
+                <a href="/">Trang chủ</a>
+                <a href="">Giới thiệu</a>
+                <a href="">Sản phẩm</a>
+                <a href="">Quy trình rang</a>
+                <a href="">Giỏ hàng</a>
+                <a href="">Liên hệ</a>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="main-content-container">
+                <div class="main-content-container-top">
+                    <div class="main-content-breadcrumbs">
+                        <ul class="main-content-breadcrumbs-menu">
+                            <li>
+                                <a href="/Project/home/index.html"><i class="fa-solid fa-house"></i></a>
+                            </li>
+                            <li>
+                                <a class="a-soc">/</a>
+                            </li>
+                            <li>
+                                <a> giỏ hàng </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-content-container-bot">
+                    <h2 class="sanpham-title">
+                        <span> Thanh toán</span>
+                    </h2>
+
+                    <div class="cart-enty woocommerce-info">
+                        bạn có muốn thay đổi đơn hàng
+                    </div>
+                    <p class="return-to-shop">
+                        <a class="button wc-backward" href="/cart.html">
+                            Quay trở lại đơn hàng
+                        </a>
+                    </p>
+                    <div class="info-thanhtoan">
+                        <h3>
+                            <span>thông tin thanh toán</span>
+                        </h3>
+                        <div class="thanhtoan-name">
+                            <div class="thanhtoan-name-item">
+                                <span>Họ và tên </span>
+                                <input class="text hoten" type="text">
+                            </div>
+                            <div class="thanhtoan-name-item">
+                                <span>Só điện thoại</span>
+                                <input class="text sodienthoai" type="text">
+                            </div>
+                            <div class="thanhtoan-name-item">
+                                <span>Địa chỉ :</span>
+                                <div>
+                                    <select name="calc_shipping_provinces" required="">
+
+                                        <option value=""
+                                            style="color: rgb(200, 51, 51);background-color: rgb(21, 22, 21);">Tỉnh /
+                                            Thành
+                                            phố</option>
+
+                                    </select>
+
+                                    <select name="calc_shipping_district" required="">
+
+                                        <option value="">Quận / Huyện</option>
+
+                                    </select>
+
+                                    <input class="billing_address_1" name="" type="hidden" value="">
+
+                                    <input class="billing_address_2" name="" type="hidden" value="">
+                                    <span style="margin-left: 30px;">
+                                        số nhà : <input type="text" id="sonha" style="width: 500px;">
+                                        <span>
+                                </div>
+                                <div>
+                                    <span> Số tiền cần thanh toán : 580000</span>
+                                </div>
+                                <div>
+                                    <span>Phương thức thanh toán</span>
+                                    <select name="phuongthuc" id="phuongthuc">
+                                        <option value="tienmat">tiền mặt</option>
+                                        <option value="bank">ngân hàng</option>
+                                        <option value="paypal">paypal</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <button class="button">Mua hàng</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://web8802.com/wp-content/themes/hienads/assets/js/quanhuyen.js"></script>
+    <script>
+        if (address_2 = localStorage.getItem('address_2_saved')) {
+
+            $('select[name="calc_shipping_district"] option').each(function () {
+
+                if ($(this).text() == address_2) {
+
+                    $(this).attr('selected', '')
+
+                }
+
+            })
+
+            $('input.billing_address_2').attr('value', address_2)
+
+        }
+
+        if (district = localStorage.getItem('district')) {
+
+            $('select[name="calc_shipping_district"]').html(district)
+
+            $('select[name="calc_shipping_district"]').on('change', function () {
+
+                var target = $(this).children('option:selected')
+
+                target.attr('selected', '')
+
+                $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+
+                address_2 = target.text()
+
+                $('input.billing_address_2').attr('value', address_2)
+
+                district = $('select[name="calc_shipping_district"]').html()
+
+                localStorage.setItem('district', district)
+
+                localStorage.setItem('address_2_saved', address_2)
+
+            })
+
+        }
+
+        $('select[name="calc_shipping_provinces"]').each(function () {
+
+            var $this = $(this),
+
+                stc = ''
+
+            c.forEach(function (i, e) {
+
+                e += +1
+
+                stc += '<option value=' + e + '>' + i + '</option>'
+
+                $this.html('<option value="">Tỉnh / Thành phố</option>' + stc)
+
+                if (address_1 = localStorage.getItem('address_1_saved')) {
+
+                    $('select[name="calc_shipping_provinces"] option').each(function () {
+
+                        if ($(this).text() == address_1) {
+
+                            $(this).attr('selected', '')
+
+                        }
+
+                    })
+
+                    $('input.billing_address_1').attr('value', address_1)
+
+                }
+
+                $this.on('change', function (i) {
+
+                    i = $this.children('option:selected').index() - 1
+
+                    var str = '',
+
+                        r = $this.val()
+
+                    if (r != '') {
+
+                        arr[i].forEach(function (el) {
+
+                            str += '<option value="' + el + '">' + el + '</option>'
+
+                            $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>' + str)
+
+                        })
+
+                        var address_1 = $this.children('option:selected').text()
+
+                        var district = $('select[name="calc_shipping_district"]').html()
+
+                        localStorage.setItem('address_1_saved', address_1)
+
+                        localStorage.setItem('district', district)
+
+                        $('select[name="calc_shipping_district"]').on('change', function () {
+
+                            var target = $(this).children('option:selected')
+
+                            target.attr('selected', '')
+
+                            $('select[name="calc_shipping_district"] option').not(target).removeAttr('selected')
+
+                            var address_2 = target.text()
+
+                            $('input.billing_address_2').attr('value', address_2)
+
+                            district = $('select[name="calc_shipping_district"]').html()
+
+                            localStorage.setItem('district', district)
+
+                            localStorage.setItem('address_2_saved', address_2)
+
+                        })
+
+                    } else {
+
+                        $('select[name="calc_shipping_district"]').html('<option value="">Quận / Huyện</option>')
+
+                        district = $('select[name="calc_shipping_district"]').html()
+
+                        localStorage.setItem('district', district)
+
+                        localStorage.removeItem('address_1_saved', address_1)
+
+                    }
+
+                })
+
+            })
+
+        })
+
+    </script>
+
+</body>
+
+</html>

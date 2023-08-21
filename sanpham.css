@@ -442,7 +442,7 @@ input#coupon_code {
   cursor: not-allowed !important;
   opacity: 0.5;
 }
-.qty-down{
+.qty-down {
   float: left;
 }
 .input-text {
@@ -501,4 +501,20 @@ button.button {
 }
 .proceed-to-checkout {
   margin-top: 20px;
+}
+.info-thanhtoan {
+  margin-top: 30px;
+}
+
+.thanhtoan-name div {
+  margin-top: 20px;
+}
+.thanhtoan-name-item .text,
+.thanhtoan-name-item select,
+#sonha {
+  color: #000000;
+  margin-left: 50px;
+}
+.thanhtoan-name-item select {
+  background-color: #44cd7f;
 }
